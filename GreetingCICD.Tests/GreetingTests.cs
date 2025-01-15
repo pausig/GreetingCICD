@@ -41,4 +41,10 @@ public class GreetingTests
     {
         Assert.Equal("Hello, Bob, John and Brian", _greetingService.Greet(["Bob", "John", "Brian"]));
     }
+
+    [Fact]
+    public void Should_Return_Combined_Shouting_Greeting_When_Input_Is_More_Than_Two_Strings()
+    {
+        Assert.Equal("Hello, Bob and John. AND HELLO BRIAN!", _greetingService.Greet(["Bob", "John", "BRIAN"]));
+    }
 }
