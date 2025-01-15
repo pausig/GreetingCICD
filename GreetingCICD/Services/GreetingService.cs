@@ -11,8 +11,8 @@ public class GreetingService : IGreetingService
         _greetingHandler = greetingHandler;
     }
 
-    public string Greet(string name)
+    public string Greet(string[] names)
     {
-        return _greetingHandler.Handle(name);
+        return _greetingHandler.Handle(names);
     }
 }

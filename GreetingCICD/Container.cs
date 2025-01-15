@@ -15,7 +15,8 @@ public class Container
                         services.AddSingleton<IGreetingService, GreetingService>()
                                 .AddSingleton<IGreetingHandler>(_ => {
                                     IGreetingHandler handler = new NullGreetingHandler();
-                                    handler.SetNext(new ShoutingGreetingHandler())
+                                    handler.SetNext(new TwoNamesGreetingHandler())
+                                           .SetNext(new ShoutingGreetingHandler())
                                            .SetNext(new NameGreetingHandler());
                                     return handler;
                                 }))

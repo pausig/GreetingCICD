@@ -2,8 +2,8 @@
 
 public class NameGreetingHandler : AbstractGreetingHandler
 {
-    public override string Handle(string name)
+    public override string Handle(string[] names)
     {
-        return $"Hello, {name}";
+        return $"Hello, {names.First()}";
     }
 }

@@ -2,11 +2,11 @@
 
 public class ShoutingGreetingHandler : AbstractGreetingHandler
 {
-    public override string Handle(string name)
+    public override string Handle(string[] names)
     {
-        if (name.All(char.IsUpper))
-            return $"HELLO, {name}";
+        if (names.First().All(char.IsUpper))
+            return $"HELLO, {names.First()}";
 
-        return base.Handle(name);
+        return base.Handle(names);
     }
 }

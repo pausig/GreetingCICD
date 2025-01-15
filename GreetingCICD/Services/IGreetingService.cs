@@ -2,5 +2,5 @@
 
 public interface IGreetingService
 {
-    string Greet(string name);
+    string Greet(string[] names);
 }

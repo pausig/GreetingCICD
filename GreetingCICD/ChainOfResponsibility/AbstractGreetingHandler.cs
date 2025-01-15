@@ -10,5 +10,5 @@ public abstract class AbstractGreetingHandler : IGreetingHandler
         return greetingHandler;
     }
 
-    public virtual string Handle(string name) => _nextGreetingHandler?.Handle(name);
+    public virtual string Handle(string[] names) => _nextGreetingHandler?.Handle(names);
 }

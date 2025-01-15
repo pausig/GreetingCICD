@@ -3,5 +3,5 @@
 public interface IGreetingHandler
 {
     IGreetingHandler SetNext(IGreetingHandler greetingHandler);
-    string Handle(string name);
+    string Handle(string[] names);
 }

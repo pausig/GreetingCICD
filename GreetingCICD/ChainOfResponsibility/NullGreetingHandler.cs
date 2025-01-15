@@ -2,11 +2,11 @@
 
 public class NullGreetingHandler : AbstractGreetingHandler
 {
-    public override string Handle(string name)
+    public override string Handle(string[] names)
     {
-        if (string.IsNullOrEmpty(name))
+        if (names == null || names.Length == 0)
             return "Hello, my friend";
 
-        return base.Handle(name);
+        return base.Handle(names);
     }
 }
