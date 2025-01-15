@@ -23,4 +23,10 @@ public class GreetingTests
         Assert.Equal("Hello, my friend", _greetingService.Greet(null));
         Assert.Equal("Hello, my friend", _greetingService.Greet(string.Empty));
     }
+
+    [Fact]
+    public void Should_Return_Shouting_Greeting_When_Input_String_Is_Uppercase()
+    {
+        Assert.Equal("HELLO, BOB", _greetingService.Greet("BOB"));
+    }
 }
