@@ -54,4 +54,12 @@ public class GreetingTests
         Assert.Equal("Hello, Bob, John and Brian", _greetingService.Greet(["Bob", "John, Brian"]));
         Assert.Equal("Hello, Bob, Luke, John and Brian", _greetingService.Greet(["Bob,Luke", "John, Brian"]));
     }
+
+    [Fact]
+    public void Should_Return_Correct_Greeting_When_Input_Strings_Contain_Escaped_Commas()
+    {
+        Assert.Equal("Hello, Bob, John, Brian", _greetingService.Greet(["\"Bob, John, Brian\""]));
+        Assert.Equal("Hello, Bob and John, Brian", _greetingService.Greet(["Bob", "\"John, Brian\""]));
+        Assert.Equal("Hello, Bob,Luke and John, Brian", _greetingService.Greet(["\"Bob,Luke\"", "\"John, Brian\""]));
+    }
 }
