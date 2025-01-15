@@ -18,3 +18,16 @@ jobs:
               run: dotnet build
             - name: Run tests
               run: dotnet test
+            - name: Create NuGet package
+              run: dotnet pack --configuration Release /p:PackageVersion=1.0.${{ github.run_number }}
+            - name: Push NuGet package
+              run: |
+                dotnet nuget add source \
+                  --username pausig \
+                  --password  ${{ secrets.TOKEN }} \
+                  --store-password-in-clear-text \
+                  --name github "https://nuget.pkg.github.com/pausig/index.json"
+                
+                dotnet nuget push "GreetingCICD/bin/Release/GreetingCICD.1.0.${{ github.run_number }}.nupkg" \
+                  --api-key ${{ secrets.TOKEN }} \
+                  --source "github"
