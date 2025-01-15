@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreetingCICD", "GreetingCICD\GreetingCICD.csproj", "{51271F05-6DD9-449B-B842-B14113E5D4EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreetingCICD.Tests", "GreetingCICD.Tests\GreetingCICD.Tests.csproj", "{1DB41177-3760-4312-8881-5CF647DBA1A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51271F05-6DD9-449B-B842-B14113E5D4EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51271F05-6DD9-449B-B842-B14113E5D4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51271F05-6DD9-449B-B842-B14113E5D4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51271F05-6DD9-449B-B842-B14113E5D4EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DB41177-3760-4312-8881-5CF647DBA1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DB41177-3760-4312-8881-5CF647DBA1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DB41177-3760-4312-8881-5CF647DBA1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DB41177-3760-4312-8881-5CF647DBA1A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
