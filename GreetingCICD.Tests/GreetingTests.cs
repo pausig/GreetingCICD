@@ -47,4 +47,11 @@ public class GreetingTests
     {
         Assert.Equal("Hello, Bob and John. AND HELLO BRIAN!", _greetingService.Greet(["Bob", "John", "BRIAN"]));
     }
+
+    [Fact]
+    public void Should_Return_Correct_Greeting_When_Input_Strings_Contain_Commas()
+    {
+        Assert.Equal("Hello, Bob, John and Brian", _greetingService.Greet(["Bob", "John, Brian"]));
+        Assert.Equal("Hello, Bob, Luke, John and Brian", _greetingService.Greet(["Bob,Luke", "John, Brian"]));
+    }
 }
