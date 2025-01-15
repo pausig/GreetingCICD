@@ -13,7 +13,11 @@ public class Container
         return Host.CreateDefaultBuilder()
                    .ConfigureServices((services) =>
                         services.AddSingleton<IGreetingService, GreetingService>()
-                                .AddSingleton<IGreetingHandler, NameGreetingHandler>())
+                                .AddSingleton<IGreetingHandler>(_ => {
+                                    IGreetingHandler handler = new NullGreetingHandler();
+                                    handler.SetNext(new NameGreetingHandler());
+                                    return handler;
+                                }))
                    .Build();
     }
 

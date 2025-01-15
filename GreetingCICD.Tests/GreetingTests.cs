@@ -16,4 +16,11 @@ public class GreetingTests
     {
         Assert.Equal("Hello, Bob", _greetingService.Greet("Bob"));
     }
+
+    [Fact]
+    public void Should_Return_Generic_Greeting_When_Input_String_Is_Null_Or_Empty()
+    {
+        Assert.Equal("Hello, my friend", _greetingService.Greet(null));
+        Assert.Equal("Hello, my friend", _greetingService.Greet(string.Empty));
+    }
 }
